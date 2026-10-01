@@ -10,7 +10,18 @@
 
 - 실제 교실 환경의 장시간 안정성 자료 확대
 - Developer ID 서명 및 Apple 공증 빌드
-- 앱 아이콘과 설치 DMG 시각 개선
+- 설치 DMG 시각 개선
+
+## [0.1.0-alpha.2] - 2026-10-01
+
+### 추가
+
+- ClassMirror 전용 macOS 앱 아이콘
+
+### 변경
+
+- Debug와 Release 앱 번들에 동일한 `AppIcon.icns` 포함
+- README에 앱 아이콘과 접근성 설명 추가
 
 ## [0.1.0-alpha.1] - 2026-10-01
 
@@ -34,5 +45,6 @@
 - 실험적 AWDL 모드는 Mac의 Apple TV AirPlay 송출과 충돌할 수 있음
 - Alpha DMG는 Developer ID로 서명·공증되지 않음
 
-[Unreleased]: https://github.com/Donkey-haw/ClassMirror/compare/v0.1.0-alpha.1...HEAD
+[Unreleased]: https://github.com/Donkey-haw/ClassMirror/compare/v0.1.0-alpha.2...HEAD
+[0.1.0-alpha.2]: https://github.com/Donkey-haw/ClassMirror/compare/v0.1.0-alpha.1...v0.1.0-alpha.2
 [0.1.0-alpha.1]: https://github.com/Donkey-haw/ClassMirror/releases/tag/v0.1.0-alpha.1

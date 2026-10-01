@@ -59,6 +59,7 @@ mkdir -p "$APP_MACOS" "$APP_RESOURCES/ThirdPartyNotices"
 cp "$BUILD_BIN_DIR/$APP_NAME" "$APP_BINARY"
 chmod +x "$APP_BINARY"
 cp "$ROOT_DIR/Resources/Info.plist" "$INFO_PLIST"
+cp "$ROOT_DIR/Resources/AppIcon.icns" "$APP_RESOURCES/AppIcon.icns"
 /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier $BUNDLE_ID" "$INFO_PLIST"
 cp "$ROOT_DIR/LICENSE" \
   "$APP_RESOURCES/ThirdPartyNotices/UxPlay-GPL-3.0.txt"

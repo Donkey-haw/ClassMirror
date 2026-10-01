@@ -26,7 +26,7 @@ GStreamer를 설치할 필요는 없습니다.
 
 ## 현재 Alpha 빌드의 첫 실행
 
-`v0.1.0-alpha.1` DMG는 Developer ID로 서명·공증되지 않았습니다. macOS가
+현재 Alpha DMG는 Developer ID로 서명·공증되지 않았습니다. macOS가
 개발자를 확인할 수 없다는 이유로 실행을 막을 수 있습니다.
 
 출처와 체크섬을 확인하고 실행하기로 결정했다면:

@@ -1,5 +1,9 @@
 # ClassMirror
 
+<p align="center">
+  <img src="Resources/AppIcon.png" width="160" alt="ClassMirror app icon">
+</p>
+
 [![CI](https://github.com/Donkey-haw/ClassMirror/actions/workflows/ci.yml/badge.svg)](https://github.com/Donkey-haw/ClassMirror/actions/workflows/ci.yml)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![macOS 15+](https://img.shields.io/badge/macOS-15%2B-black)](docs/INSTALLATION.md)
