@@ -1,0 +1,16 @@
+.DS_Store
+.build/
+.build-release/
+.swiftpm/
+.vendor/
+.phase0/
+.codex/
+dist/
+dist-release/
+DerivedData/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+.env
+.env.*
+!.env.example

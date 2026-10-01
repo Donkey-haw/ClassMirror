@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 보안 취약점 신고
+    url: https://github.com/Donkey-haw/ClassMirror/security/advisories/new
+    about: 민감한 보안 문제는 비공개로 신고해 주세요.
+  - name: 사용 및 문제 해결
+    url: https://github.com/Donkey-haw/ClassMirror/blob/main/docs/TROUBLESHOOTING.md
+    about: 연결 문제를 보고하기 전에 문제 해결 문서를 확인하세요.

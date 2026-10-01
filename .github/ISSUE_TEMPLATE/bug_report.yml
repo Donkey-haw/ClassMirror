@@ -1,0 +1,92 @@
+name: 버그 보고
+description: 재현 가능한 ClassMirror 문제를 알려 주세요.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        학생 화면, Apple ID, PIN, 개인 기기명, IP 주소를 첨부하지 마세요.
+        보안 취약점은 공개 Issue 대신 SECURITY.md의 비공개 절차를 이용하세요.
+
+  - type: input
+    id: version
+    attributes:
+      label: ClassMirror 버전
+      placeholder: v0.1.0-alpha.1
+    validations:
+      required: true
+
+  - type: input
+    id: mac
+    attributes:
+      label: Mac과 macOS
+      placeholder: MacBook Pro M2, macOS 15.7
+    validations:
+      required: true
+
+  - type: input
+    id: sender
+    attributes:
+      label: 송신 기기와 OS
+      placeholder: iPad Air, iPadOS 18.7
+    validations:
+      required: true
+
+  - type: dropdown
+    id: network
+    attributes:
+      label: 네트워크
+      options:
+        - 가정용 공유기
+        - 학교 Wi-Fi
+        - 개인 핫스팟
+        - 기타
+    validations:
+      required: true
+
+  - type: dropdown
+    id: connection_mode
+    attributes:
+      label: ClassMirror 연결 모드
+      options:
+        - Apple TV 동시 사용 (로컬 네트워크)
+        - 학교망 직접 연결 (실험적)
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 재현 절차
+      description: 문제가 반복되는 최소 단계를 번호로 작성해 주세요.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 예상 결과
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 실제 결과
+    validations:
+      required: true
+
+  - type: textarea
+    id: comparison
+    attributes:
+      label: 비교 시험
+      description: 다른 공유기, Apple TV 미사용, 앱 재시작 등 비교 결과가 있으면 적어 주세요.
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 개인정보 확인
+      options:
+        - label: 첨부 자료에서 학생 화면, Apple ID, PIN, 개인 기기명과 IP 주소를 제거했습니다.
+          required: true

@@ -1,0 +1,10 @@
+# Preserve the pinned upstream snapshot byte-for-byte; its original whitespace
+# is not part of ClassMirror's formatting policy.
+ThirdParty/AirPlayCoreTarget/Upstream/** whitespace=-trailing-space,-space-before-tab,-blank-at-eof
+
+*.swift text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
