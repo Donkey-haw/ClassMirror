@@ -36,11 +36,6 @@ if [[ "$(uname -s)" != "Darwin" || "$(uname -m)" != "arm64" ]]; then
   exit 1
 fi
 
-if [[ -f "$MARKER" ]] && grep -q "build revision ${BUILD_REVISION}" "$MARKER"; then
-  printf '%s\n' "$PREFIX_DIR"
-  exit 0
-fi
-
 mkdir -p "$DOWNLOAD_DIR" "$SOURCE_DIR" "$PREFIX_DIR"
 
 if [[ -f "$BUNDLED_SOURCE_DIR/$(basename "$OPENSSL_ARCHIVE")" && ! -f "$OPENSSL_ARCHIVE" ]]; then
@@ -77,6 +72,11 @@ download_and_verify \
 
 if [[ "$MODE" == "--download-only" ]]; then
   printf '%s\n%s\n' "$OPENSSL_ARCHIVE" "$LIBPLIST_ARCHIVE"
+  exit 0
+fi
+
+if [[ -f "$MARKER" ]] && grep -q "build revision ${BUILD_REVISION}" "$MARKER"; then
+  printf '%s\n' "$PREFIX_DIR"
   exit 0
 fi
 
