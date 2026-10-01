@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+MODE="${1:-build}"
+if [[ "$MODE" != "build" && "$MODE" != "--download-only" ]]; then
+  echo "usage: $0 [--download-only]" >&2
+  exit 2
+fi
+
 OPENSSL_VERSION="3.6.4"
 OPENSSL_SHA256="9bffaa1ad1e07b354c21bd3324ec02fa15579f45a7d0494b3e74bc449b7333ef"
 LIBPLIST_VERSION="2.7.0"
@@ -10,6 +16,7 @@ BUILD_REVISION="2"
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 VENDOR_DIR="$ROOT_DIR/.vendor"
+BUNDLED_SOURCE_DIR="$ROOT_DIR/vendor-sources"
 DOWNLOAD_DIR="$VENDOR_DIR/downloads"
 SOURCE_DIR="$VENDOR_DIR/sources"
 PREFIX_DIR="$VENDOR_DIR/prefix-macos${DEPLOYMENT_TARGET}-arm64"
@@ -36,6 +43,13 @@ fi
 
 mkdir -p "$DOWNLOAD_DIR" "$SOURCE_DIR" "$PREFIX_DIR"
 
+if [[ -f "$BUNDLED_SOURCE_DIR/$(basename "$OPENSSL_ARCHIVE")" && ! -f "$OPENSSL_ARCHIVE" ]]; then
+  cp "$BUNDLED_SOURCE_DIR/$(basename "$OPENSSL_ARCHIVE")" "$OPENSSL_ARCHIVE"
+fi
+if [[ -f "$BUNDLED_SOURCE_DIR/$(basename "$LIBPLIST_ARCHIVE")" && ! -f "$LIBPLIST_ARCHIVE" ]]; then
+  cp "$BUNDLED_SOURCE_DIR/$(basename "$LIBPLIST_ARCHIVE")" "$LIBPLIST_ARCHIVE"
+fi
+
 download_and_verify() {
   local url="$1"
   local destination="$2"
@@ -60,6 +74,11 @@ download_and_verify \
   "https://github.com/libimobiledevice/libplist/releases/download/${LIBPLIST_VERSION}/libplist-${LIBPLIST_VERSION}.tar.bz2" \
   "$LIBPLIST_ARCHIVE" \
   "$LIBPLIST_SHA256"
+
+if [[ "$MODE" == "--download-only" ]]; then
+  printf '%s\n%s\n' "$OPENSSL_ARCHIVE" "$LIBPLIST_ARCHIVE"
+  exit 0
+fi
 
 if [[ ! -d "$OPENSSL_SOURCE" ]]; then
   tar -xf "$OPENSSL_ARCHIVE" -C "$SOURCE_DIR"

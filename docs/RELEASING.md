@@ -27,6 +27,19 @@ dist-release/ClassMirror-0.1.0-alpha.1-macos-arm64.dmg
 dist-release/ClassMirror-0.1.0-alpha.1-macos-arm64.dmg.sha256
 ```
 
+배포 바이너리에 정적으로 연결되는 의존성의 고정 원본까지 포함한 대응 소스
+묶음도 생성합니다.
+
+```bash
+CLASSMIRROR_RELEASE_VERSION=0.1.0-alpha.1 \
+  ./script/package_source.sh
+```
+
+```text
+dist-release/ClassMirror-0.1.0-alpha.1-source.tar.gz
+dist-release/ClassMirror-0.1.0-alpha.1-source.tar.gz.sha256
+```
+
 이 DMG는 ad-hoc 서명이므로 GitHub Release를 **pre-release**로 표시하고
 Gatekeeper 수동 승인 필요성을 릴리스 노트 첫 부분에 명시합니다.
 
@@ -68,7 +81,7 @@ spctl --assess --type open --context context:primary-signature --verbose=4 \
 ## 5. GitHub Release
 
 - 태그와 제목이 앱 버전과 일치하는지 확인
-- DMG와 `.sha256` 첨부
+- DMG, 전체 대응 소스 묶음과 각 `.sha256` 첨부
 - 지원 환경, 설치법, 주요 변경, 알려진 문제 작성
 - GPL-3.0과 정확한 태그 source archive 링크 확인
 - 공증 여부를 명시

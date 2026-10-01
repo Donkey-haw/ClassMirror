@@ -69,6 +69,16 @@ CLASSMIRROR_RELEASE_VERSION=0.1.0-alpha.1 \
   ./script/package_release.sh
 ```
 
+고정된 OpenSSL·libplist 원본까지 포함하는 대응 소스 묶음:
+
+```bash
+CLASSMIRROR_RELEASE_VERSION=0.1.0-alpha.1 \
+  ./script/package_source.sh
+```
+
+대응 소스 묶음을 풀어 빌드하면 `vendor-sources`의 검증된 원본을 우선
+사용하므로 의존성 소스 다운로드 없이 Release 의존성을 재구성할 수 있습니다.
+
 Developer ID와 공증 프로필이 있는 경우:
 
 ```bash
