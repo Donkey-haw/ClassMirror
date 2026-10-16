@@ -16,6 +16,9 @@ Mac의 독립된 창으로 수신하는 경량 AirPlay Receiver입니다. 동일
 iPad / iPhone → AirPlay → ClassMirror 창 → Apple TV / 프로젝터 / OBS
 ```
 
+처음 사용하는 교사는 [교사용 소개 슬라이드](https://claude.ai/artifact/GfqgDp7Y5YWwnmKYxJrTof)에서
+설치와 사용 방법을 한눈에 볼 수 있습니다.
+
 > **Alpha 소프트웨어:** 현재 공개 빌드는 기능 검증을 위한 사전
 > 공개판입니다. 중요한 수업 전에 사용할 네트워크와 기기로 충분히
 > 시험하세요.
@@ -68,6 +71,7 @@ Apple TV와 동시에 사용할 때는 ClassMirror 설정 → 연결에서 **App
 
 ## 문서
 
+- [교사용 소개 슬라이드](https://claude.ai/artifact/GfqgDp7Y5YWwnmKYxJrTof)
 - [설치](docs/INSTALLATION.md)
 - [사용 설명서](docs/USER_GUIDE.md)
 - [문제 해결](docs/TROUBLESHOOTING.md)
