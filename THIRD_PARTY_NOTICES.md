@@ -12,8 +12,9 @@ original source files remain authoritative.
 - Local source: `ThirdParty/AirPlayCoreTarget/Upstream`
 
 ClassMirror embeds a modified receiver-only subset and replaces UxPlay's
-GStreamer renderer with native macOS media pipelines. ClassMirror as a whole is
-distributed under GPL-3.0. The full license is in `LICENSE`.
+GStreamer renderer with native macOS media pipelines. Modified upstream files
+are marked in their headers and listed in `ThirdParty/README.md`. ClassMirror as
+a whole is distributed under GPL-3.0. The full license is in `LICENSE`.
 
 ## PlayFair
 

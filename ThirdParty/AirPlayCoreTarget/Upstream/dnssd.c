@@ -13,6 +13,8 @@
  *
  *=================================================================
  * modified by fduncanh 2022
+ * modified for ClassMirror 2026: optional peer-to-peer (AWDL) service registration;
+ *   omit the RAOP "sf" TXT record
  */
 
 /* These defines allow us to compile on iOS */

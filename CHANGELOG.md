@@ -6,6 +6,11 @@
 
 ## [Unreleased]
 
+### 변경
+
+- 수정한 UxPlay 원본 파일 8개에 GPLv3 §5(a) 수정 고지를 추가하고
+  `ThirdParty/README.md`에 변경 목록 정리
+
 ### 예정
 
 - 실제 교실 환경의 장시간 안정성 자료 확대

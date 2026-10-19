@@ -13,6 +13,7 @@
  *  Lesser General Public License for more details.
  *==================================================================
  * modified by fduncanh 2021, 2023
+ * modified for ClassMirror 2026: validate SRP proof lengths before verification
  */
 
 #include <stdlib.h>

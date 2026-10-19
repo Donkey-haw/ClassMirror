@@ -13,6 +13,8 @@
  *
  *===================================================================
  * modfied by fduncanh 2021-2023
+ * modified for ClassMirror 2026: per-connection digest nonce; count only submitted PIN failures;
+ *   free buffers on invalid SRP proof length
  */
 
 /* This file should be only included from raop.c as it defines static handler

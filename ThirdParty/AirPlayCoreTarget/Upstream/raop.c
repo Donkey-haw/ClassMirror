@@ -12,6 +12,7 @@
  *
  *===================================================================
  * modified by fduncanh 2021-23
+ * modified for ClassMirror 2026: keep the digest-auth nonce per RTSP connection
  */
 
 #include <stdlib.h>

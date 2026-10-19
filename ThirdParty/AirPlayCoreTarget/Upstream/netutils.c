@@ -13,6 +13,7 @@
  *
  *==================================================================
  * modified by fduncanh 2022
+ * modified for ClassMirror 2026: SO_RECV_ANYIF on listening sockets in peer-to-peer mode
  */
 
 #include <stdlib.h>
